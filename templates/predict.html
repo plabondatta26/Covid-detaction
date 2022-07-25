@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <form action="{% url  'prediction' %}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="form-row">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+                <div class="form-row">
+                    <label for="">Age</label>
+                    <input type="number" class="form-control" name="age" id="age">
+                </div>
+                <div class="form-row">
+                    <label for="">Name</label>
+                    <input type="file" class="form-control" name="image" id="image" accept="images/*">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

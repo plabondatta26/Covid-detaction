@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <div class="row mb-2">
+        <div class="card-body">
+            <form action="{% url 'test_create' %} " method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" name="user" id="user" style="display: none;" value="{{request.user.id}}">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-row ">
+                            <label for=" ">Name</label>
+                            <input type="text " class="form-control " name="name" id="name" placeholder="Enter patient name">
+                        </div>
+                        <div class="form-row ">
+                            <label for=" ">Age</label>
+                            <input type="number " class="form-control " name="age" id="age" placeholder="Enter patient age">
+                        </div>
+                        <div class="form-row mt-2">
+                            <label for=" " class="mr-2">Gender</label> {{form.gender}}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-row mt-2">
+                            <label for=" " class="mr-2">Contact Number</label>
+                            <input type="text" class="form-control" id="phone" name="phone" maxlength="11" placeholder="Enter mobile number" required>
+                        </div>
+                        <div class="form-row mt-2">
+                            <label for=" " class="mr-2">Image</label> {{form.image}}
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-success mt-2" value="Check">
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- about section start -->
+<div class="about_section layout_padding">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <img src="{% static 'images/sir.jpeg' %}" class="about_img">
+
+                    <br>
+                    <h2 class="about_taital">Al Bashir</span>
+                    </h2>
+                    <div class="details">
+                        <h3>Supervisor</h3>
+                        <h4>Lecturer, Dept. of CSE</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="about_img"><img src="{% static 'images/nila.jpeg' %}" class="about_img"></div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="about_taital">Shorna Islam Nila</h2>
+                <div class="details">
+                    <h3>Team Leader</h3>
+                    <h4>Roll: 11</h4>
+                    <h4>Roll: 48 <sup>th</sup></h4>
+                    <h4>Reg No: CS-D-48-17-106974</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h2 class="about_taital">Md. Radwan Mahmud</h2>
+                <div class="details">
+                    <h3>Team Member</h3>
+                    <h4>Roll: 44</h4>
+                    <h4>Roll: 48 <sup>th</sup></h4>
+                    <h4>Reg No: CS-D-47-17-106399</h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_img"><img src="{% static 'images/redwan.jpg' %}" class="about_img"></div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="about_img"><img src="{% static 'images/Rozeen.jpeg' %}" class="about_img"></div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="about_taital"> Md. Musawbiru Rahman</span>
+                </h2>
+                <div class="details">
+                    <h3>Team Member</h3>
+                    <h4>Roll: 47</h4>
+                    <h4>Roll: 48 <sup>th</sup></h4>
+                    <h4>Reg No: CS-D-48-18-110197</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h2 class="about_taital">Hamidur Rahaman Majumder</span>
+                </h2>
+
+                <div class="details">
+                    <h3>Team Member</h3>
+                    <h4>Roll: 37</h4>
+                    <h4>Roll: 49 <sup>th</sup></h4>
+                    <h4>Reg No: CS-D-49-17-107547</h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_img"><img src="{% static 'images/nayan.jpeg' %}" class="about_img"></div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="about_img"><img src="{% static 'images/tushar.jpeg' %}" class="about_img"></div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="about_taital">Tushar Das</span>
+                </h2>
+                <div class="details">
+                    <h3>Team Member</h3>
+                    <h4>Roll: 34</h4>
+                    <h4>Roll: 48 <sup>th</sup></h4>
+                    <h4>Reg No: CS-D-48-17-107166</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- about section end -->
+<script>
+    $(document).ready(function() {
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+        });
+
+        $(".zoom").hover(function() {
+
+            $(this).addClass('transition');
+        }, function() {
+
+            $(this).removeClass('transition');
+        });
+    });
+</script>
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+{% endblock content %}
